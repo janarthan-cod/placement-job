@@ -1,60 +1,132 @@
 # Placement Job Portal
 
-A React + TypeScript web application for managing campus placement jobs, student applications, and placement coordinator workflows.
+A modern React + TypeScript web application designed for college placement management. The portal allows students to explore job openings, submit applications, and track their progress, while placement officers can review applicants and manage hiring activities from a dedicated dashboard.
+
+## live demo - https://charming-banoffee-52aa98.netlify.app/
+
+## Overview
+
+This project simulates a complete placement portal workflow with:
+- Student-friendly job discovery and filtering
+- Detailed job descriptions and eligibility information
+- Application submission forms
+- Application status tracking
+- Officer dashboard for candidate management
+- Clean, responsive UI for desktop and tablet usage
 
 ## Features
 
-- Browse available placement jobs
-- View detailed job information
-- Apply for jobs with a form-based workflow
-- Track application status
-- Use a coordinator dashboard to review and manage candidates
-- Filter and search through job listings
+### Student Features
+- Browse all available placement opportunities
+- Search and filter jobs by category or company
+- View detailed job descriptions and requirements
+- Apply to jobs using an application form
+- Track application status over time
+
+### Officer Features
+- Review incoming student applications
+- View candidate details and resumes/skills information
+- Update application statuses
+- Monitor placement activity using summary statistics
 
 ## Tech Stack
 
-- React
+- React 19
 - TypeScript
 - Vite
+- CSS modules / custom CSS
 - Tailwind CSS
 - Lucide icons
 - Motion animations
+
+## Project Structure
+
+```text
+src/
+├── components/
+│   ├── ApplicationFormModal.tsx
+│   ├── JobCard.tsx
+│   ├── JobDetailView.tsx
+│   ├── OfficerDashboardView.tsx
+│   └── StatCard.tsx
+├── App.tsx
+├── data.ts
+├── index.css
+├── main.tsx
+└── types.ts
+```
 
 ## Getting Started
 
 ### Prerequisites
 
-- Node.js (recommended version 18 or higher)
-- npm
+- Node.js 18 or higher
+- npm or yarn
 
 ### Installation
 
 1. Clone the repository
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Start the development server:
-   ```bash
-   npm run dev
-   ```
+2. Navigate to the project folder
+3. Install dependencies:
 
-The app will be available at the local Vite URL shown in the terminal.
+```bash
+npm install
+```
 
-## Project Structure
+4. Start the development server:
 
-- `src/` — application source files
-- `src/components/` — reusable UI components
-- `src/data.ts` — sample job and application data
-- `src/types.ts` — shared TypeScript types
-- `index.html` — app entry point
+```bash
+npm run dev
+```
 
-## Build for Production
+5. Open the URL shown in the terminal (usually `http://localhost:3000`)
+
+## Available Scripts
+
+```bash
+npm run dev
+```
+Starts the local development server.
 
 ```bash
 npm run build
 ```
+Creates a production-ready build.
+
+```bash
+npm run preview
+```
+Previews the production build locally.
+
+## How the App Works
+
+1. The homepage shows a list of job cards.
+2. Users can click a job to see full details.
+3. Students can submit applications from the modal form.
+4. The officer dashboard provides an overview of applicants and job activity.
+5. Data is managed through the sample dataset in [src/data.ts](src/data.ts).
+
+## Sample Data
+
+The app uses predefined sample data for:
+- placement jobs
+- student profiles
+- application statuses
+- recruiter/placement officer information
+
+## Styling
+
+The UI uses a modern, attractive color palette and responsive layout to provide a smooth experience across devices.
+
+## Deployment
+
+This project can be deployed on any static hosting service that supports Vite applications, such as:
+- Vercel
+- Netlify
+- GitHub Pages
 
 ## Notes
 
-This project is designed for a placement portal workflow and does not require any external API setup.
+- No external API setup is required for the current version.
+- The application is designed for demonstration and educational use.
+- You can customize the sample data in [src/data.ts](src/data.ts) to match your college or company requirements.
